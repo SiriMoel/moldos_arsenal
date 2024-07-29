@@ -101,6 +101,37 @@ for i,v in ipairs(wizards) do
     end
 end
 
+-- pixel scenes (thanks graham)
+local function add_scene(table)
+	local biome_path = ModIsEnabled("noitavania") and "mods/noitavania/data/biome/_pixel_scenes.xml" or "data/biome/_pixel_scenes.xml"
+	local content = ModTextFileGetContent(biome_path)
+	local string = "<mBufferedPixelScenes>"
+	local worldsize = ModTextFileGetContent("data/compatibilitydata/worldsize.txt") or 35840
+	for i = 1, #table do
+		string = string .. [[<PixelScene pos_x="]] .. table[i][1] .. [[" pos_y="]] .. table[i][2] .. [[" just_load_an_entity="]] .. table[i][3] .. [["/>]]
+		if table[i][4] then
+			-- make things show up in first 2 parallel worlds
+			-- hopefully this won't cause too much lag when starting a run
+			string = string .. [[<PixelScene pos_x="]] .. table[i][1] + worldsize .. [[" pos_y="]] .. table[i][2] .. [[" just_load_an_entity="]] .. table[i][3] .. [["/>]]
+			string = string .. [[<PixelScene pos_x="]] .. table[i][1] - worldsize .. [[" pos_y="]] .. table[i][2] .. [[" just_load_an_entity="]] .. table[i][3] .. [["/>]]
+			string = string .. [[<PixelScene pos_x="]] .. table[i][1] + worldsize * 2 .. [[" pos_y="]] .. table[i][2] .. [[" just_load_an_entity="]] .. table[i][3] .. [["/>]]
+			string = string .. [[<PixelScene pos_x="]] .. table[i][1] - worldsize * 2 .. [[" pos_y="]] .. table[i][2] .. [[" just_load_an_entity="]] .. table[i][3] .. [["/>]]
+		end
+	end
+	content = content:gsub("<mBufferedPixelScenes>", string)
+	ModTextFileSetContent(biome_path, content)
+end
+
+local scenes = {
+    { 16165, -1790, "mods/moldos_arsenal/files/entities/items/essencewand_earth/weapon.xml", true },
+    { -14090, 360, "mods/moldos_arsenal/files/entities/items/essencewand_fire/weapon.xml", true },
+    {-13020, -5380, "mods/moldos_arsenal/files/entities/items/essencewand_air/weapon.xml", true },
+    { -14040, 13570, "mods/moldos_arsenal/files/entities/items/essencewand_spirits/weapon.xml", true },
+    { -5340, 16640, "mods/moldos_arsenal/files/entities/items/essencewand_water/weapon.xml", true },
+}
+
+add_scene(scenes)
+
 -- player
 function OnPlayerSpawned( player )
 
