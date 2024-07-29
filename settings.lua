@@ -16,11 +16,11 @@ function mod_setting_change_callback( mod_id, gui, in_main_menu, setting, old_va
 	print( tostring(new_value) )
 end
 
-local mod_id = "tales_of_kupoli"
+local mod_id = "moldos_arsenal"
 mod_settings_version = 1 
 mod_settings = {
     {
-        image_filename = "mods/tales_of_kupoli/aaa.png",
+        image_filename = "mods/moldos_arsenal/aaa.png",
         ui_fn = mod_setting_image,
     },
     {

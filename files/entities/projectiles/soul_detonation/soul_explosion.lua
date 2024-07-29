@@ -1,5 +1,5 @@
-dofile_once("mods/tales_of_kupoli/files/utils.lua")
-dofile_once("mods/tales_of_kupoli/files/scripts/souls.lua")
+dofile_once("mods/moldos_arsenal/files/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/souls.lua")
 
 local entity_id = GetUpdatedEntityID()
 local root_id = EntityGetRootEntity( entity_id )
@@ -21,7 +21,7 @@ if soul == nil or soul == 0 then
 
     EntityKill(entity_id)
 else
-	if ModSettingGet( "tales_of_kupoli.say_consumed_soul" ) then
+	if ModSettingGet( "moldos_arsenal.say_consumed_soul" ) then
 		GamePrint( "You have consumed a soul." )
 	end
 

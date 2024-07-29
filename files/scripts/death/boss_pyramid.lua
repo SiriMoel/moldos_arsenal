@@ -1,4 +1,4 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 dofile_once("data/scripts/perks/perk.lua")
 
 function death( damage_type_bit_field, damage_message, entity_thats_responsible, drop_items )
@@ -8,5 +8,5 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	--CreateItemActionEntity("KUPOLI_TOME_LAUNCHER", x, y)
 
-	EntityLoad("mods/tales_of_kupoli/files/entities/items/pyramidwand/weapon.xml", x, y)
+	EntityLoad("mods/moldos_arsenal/files/entities/items/pyramidwand/weapon.xml", x, y)
 end

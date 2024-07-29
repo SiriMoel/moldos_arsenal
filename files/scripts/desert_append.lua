@@ -1,4 +1,4 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 dofile_once("data/scripts/director_helpers.lua")
 dofile_once("data/scripts/biome_scripts.lua")
 
@@ -10,7 +10,7 @@ function init(x, y, w, h)
     init_old(x, y, w, h)
     print("testing - desert init")
 
-    local lootorb = "mods/tales_of_kupoli/files/entities/arch_orb/lootorb.xml"
+    local lootorb = "mods/moldos_arsenal/files/entities/arch_orb/lootorb.xml"
 
     if y > 10 and y < 200 then
 

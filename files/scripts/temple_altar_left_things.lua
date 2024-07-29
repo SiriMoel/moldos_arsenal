@@ -1,4 +1,4 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 
 function spawn_statue( x, y )
 	local curse = GameHasFlagRun( "greed_curse" )
@@ -10,5 +10,5 @@ function spawn_statue( x, y )
 		--EntityLoad( "data/entities/props/temple_statue_01.xml", x, y )
 	end
 
-    EntityLoad("mods/tales_of_kupoli/files/biome/soultrader/soultrader.xml", x, y)
+    EntityLoad("mods/moldos_arsenal/files/biome/soultrader/soultrader.xml", x, y)
 end

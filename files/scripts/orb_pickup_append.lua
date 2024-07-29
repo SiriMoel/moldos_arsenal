@@ -1,6 +1,6 @@
 dofile("data/scripts/game_helpers.lua")
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
-dofile_once("mods/tales_of_kupoli/files/scripts/sunbook_pages.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/sunbook_pages.lua")
 
 local item_pickup_old = item_pickup
 

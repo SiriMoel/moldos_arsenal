@@ -31,7 +31,7 @@ end
 end
 
 function SetFileContent(toset, content)
-    ModTextFileSetContent(toset, ModTextFileGetContent("mods/tales_of_kupoli/files/set/" .. content))
+    ModTextFileSetContent(toset, ModTextFileGetContent("mods/moldos_arsenal/files/set/" .. content))
 end
 
 function IsInRadiusOf(xa, ya, xb, yb, radius) -- i dont think this works, isnt needed anyway.

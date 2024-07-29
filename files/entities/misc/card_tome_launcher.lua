@@ -1,5 +1,5 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
-dofile_once("mods/tales_of_kupoli/files/scripts/souls.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/souls.lua")
 
 local card = GetUpdatedEntityID()
 local root = EntityGetRootEntity(card) -- player, right?

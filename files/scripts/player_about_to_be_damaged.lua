@@ -1,5 +1,5 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
-dofile_once("mods/tales_of_kupoli/files/scripts/souls.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/souls.lua")
 
 function damage_about_to_be_received(damage, x, y, entity_thats_responsible, critical_hit_chance )
     local player = GetUpdatedEntityID()
@@ -15,7 +15,7 @@ function damage_about_to_be_received(damage, x, y, entity_thats_responsible, cri
                 for i,v in ipairs(effects_to_remove) do
                     EntityRemoveStainStatusEffect(player, v)
                 end
-                LoadGameEffectEntityTo(player, "mods/tales_of_kupoli/files/entities/items/deadringer/buff.xml")
+                LoadGameEffectEntityTo(player, "mods/moldos_arsenal/files/entities/items/deadringer/buff.xml")
                 ComponentSetValue2(comp_cd, "value_int", 600)
                 GamePrint("Feigned death!")
                 GamePlaySound("data/audio/Desktop/explosions.bank", "explosions/electric", x, y)

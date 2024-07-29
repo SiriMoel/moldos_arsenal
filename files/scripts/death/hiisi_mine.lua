@@ -1,6 +1,6 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 dofile_once("data/scripts/perks/perk.lua")
-dofile_once("mods/tales_of_kupoli/files/alterants.lua")
+dofile_once("mods/moldos_arsenal/files/alterants.lua")
 
 function death( damage_type_bit_field, damage_message, entity_thats_responsible, drop_items )
 	local entity_id    = GetUpdatedEntityID()
@@ -12,6 +12,6 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	local r = math.random(1,3)
 	if r == 2 then
-		EntityLoad("mods/tales_of_kupoli/files/entities/items/hiisiminethrower/weapon.xml", x, y-20)
+		EntityLoad("mods/moldos_arsenal/files/entities/items/hiisiminethrower/weapon.xml", x, y-20)
 	end
 end
