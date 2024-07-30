@@ -7,7 +7,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	EntityLoad("mods/moldos_arsenal/files/entities/items/squidpearl/weapon.xml", x, y)
 
-	--CreateItemActionEntity("KUPOLI_TOME_LOOTER", x, y)
+	--CreateItemActionEntity("moldos_TOME_LOOTER", x, y)
 
 	GameAddFlagRun("ikkuna_squid")
 	GamePrint("Trace found!")

@@ -1,4 +1,4 @@
-<Entity name="Hiisi Sniper" tags="teleportable_NOT,wand,item,kupoli_hiisi_sniper">
+<Entity name="Hiisi Sniper" tags="teleportable_NOT,wand,item,moldos_hiisi_sniper">
 
 	<AbilityComponent 
         amount_in_inventory="1"

@@ -9,7 +9,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	EntityLoad("mods/moldos_arsenal/files/entities/items/dragonwand/weapon.xml", x, y)
 
-	--CreateItemActionEntity("KUPOLI_TOME_SLICE", x, y)
+	--CreateItemActionEntity("moldos_TOME_SLICE", x, y)
 
 	GameAddFlagRun("ikkuna_dragon")
 	GamePrint("Trace found!")

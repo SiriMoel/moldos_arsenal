@@ -46,8 +46,8 @@ gun.spread_degrees = -1
 gun.speed_multiplier = 1.3
 gun.mana_charge_speed = {500,650}
 gun.mana_max = {900,1100}
-gun.actions_mod = {"KUPOLI_SOULS_TO_POWER","KUPOLI_REAPING_SHOT","KUPOLI_SOUL_IS_MANA", "KUPOLI_SOUL_SPEED", "KUPOLI_RANDOM_REAP", "KUPOLI_SOULDOS"}
-gun.actions_proj = {"KUPOLI_SOUL_BLAST","KUPOLI_SOUL_BALL","KUPOLI_SOUL_NECROMANCY", "KUPOLI_SOUL_ARROW"}
+gun.actions_mod = {"moldos_SOULS_TO_POWER","moldos_REAPING_SHOT","moldos_SOUL_IS_MANA", "moldos_SOUL_SPEED", "moldos_RANDOM_REAP", "moldos_SOULDOS"}
+gun.actions_proj = {"moldos_SOUL_BLAST","moldos_SOUL_BALL","moldos_SOUL_NECROMANCY", "moldos_SOUL_ARROW"}
 
 local mana_max = get_random_between_range( gun.mana_max )
 local deck_capacity = gun.deck_capacity
@@ -79,7 +79,7 @@ for i=1,action_count do
 	AddGunAction( entity_id, gun_action_proj )
 end
 
-AddGunActionPermanent( entity_id, "KUPOLI_REAPING_SHOT" )
+AddGunActionPermanent( entity_id, "moldos_REAPING_SHOT" )
 
 local item_comp = EntityGetFirstComponent( entity_id, "ItemComponent" )
 ComponentSetValue2( item_comp, "item_name", "Wand of Souls" )

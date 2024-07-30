@@ -9,7 +9,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
     math.randomseed(x, y+GameGetFrameNum())
 
     if math.random(1, 20) == 10 then
-        CreateItemActionEntity( "KUPOLI_DIAHEART_LENSE", x , y )
+        CreateItemActionEntity( "moldos_DIAHEART_LENSE", x , y )
     end
 
 	EntityLoad("mods/moldos_arsenal/files/entities/revived/_tablets/alchemist.xml", x, y)

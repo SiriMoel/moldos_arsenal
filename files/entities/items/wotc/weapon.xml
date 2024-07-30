@@ -1,4 +1,4 @@
-<Entity tags="wand,kupoli_door_key,kupoli_blue_sun_item">
+<Entity tags="wand,moldos_door_key,moldos_blue_sun_item">
     <AbilityComponent 
         amount_in_inventory="1" 
         cooldown_frames="0" 

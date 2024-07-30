@@ -106,7 +106,7 @@ function weapon_rngstats(weapon, x, y, statsm)
             local mm = tonumber( ComponentGetValue2( ac, "mana_max" ) ) -- mana max
             local cap = tonumber( ComponentObjectGetValue( ac, "gun_config", "deck_capacity" ) ) -- deck capacity 
 
-            if GameHasFlagRun("kupoli_better_weapons") then
+            if GameHasFlagRun("moldos_better_weapons") then
                 rt = rt * 0.6
                 frw = frw * 0.6
                 mcs = mcs * 1.6

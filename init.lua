@@ -60,6 +60,10 @@ local dropdoers = {
         path = "data/entities/animals/icer.xml",
         script = "mods/moldos_arsenal/files/scripts/death/robot_icer.lua",
     },
+    {
+        path = "data/entities/animals/boss_robot/boss_robot.xml",
+        script = "mods/moldos_arsenal/files/scripts/death/boss_robot.lua",
+    },
 }
 
 for i,v in ipairs(dropdoers) do
@@ -85,8 +89,8 @@ local wizards = {
     "data/entities/animals/wizard_twitchy.xml",
     "data/entities/animals/wizard_weaken.xml",
     "data/entities/animals/monk.xml",
-    "data/entities/animals/kupoli_soul_angry.xml",
-    "data/entities/animals/kupoli_puppet_master.xml",
+    "data/entities/animals/moldos_soul_angry.xml",
+    "data/entities/animals/moldos_puppet_master.xml",
 }
 for i,v in ipairs(wizards) do
     if ModTextFileGetContent(v) ~= nil then

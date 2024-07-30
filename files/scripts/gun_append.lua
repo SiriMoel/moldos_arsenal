@@ -5,7 +5,7 @@ dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 local _add_card_to_deck = add_card_to_deck
 add_card_to_deck = function(...)
     _add_card_to_deck(...)
-    if action_clone.id ~= "KUPOLI_OPEN_GATE" then return end
+    if action_clone.id ~= "moldos_OPEN_GATE" then return end
     local _action = action_clone.action
     target.action = function(...)
         _action(action_clone.inventory_item_id, ...)

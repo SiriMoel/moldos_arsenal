@@ -3,7 +3,7 @@ dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 local entity_id = GetUpdatedEntityID()
 local x, y = EntityGetTransform( entity_id )
 
-local keys = EntityGetInRadiusWithTag( x, y, 8, "kupoli_soul_key" )
+local keys = EntityGetInRadiusWithTag( x, y, 8, "moldos_soul_key" )
 
 math.randomseed(x, y+tonumber(StatsGetValue("world_seed")))
 

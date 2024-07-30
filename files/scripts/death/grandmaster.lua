@@ -5,7 +5,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 	local entity = GetUpdatedEntityID()
 	local x, y = EntityGetTransform(entity)
 
-	--[[local opts = { "KUPOLI_DIAHEART_LENSE", "KUPOLI_DIAHEART_LENSE", "KUPOLI_DIAHEART_LENSE", "KUPOLI_DIAHEART_LENSE", "KUPOLI_DIAHEART_LENSE" }
+	--[[local opts = { "moldos_DIAHEART_LENSE", "moldos_DIAHEART_LENSE", "moldos_DIAHEART_LENSE", "moldos_DIAHEART_LENSE", "moldos_DIAHEART_LENSE" }
 	
 	for i=1,4 do
 		CreateItemActionEntity( opts[i], x - 8 * 4 + (i-1) * 16, y )
@@ -13,7 +13,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	EntityLoad("mods/moldos_arsenal/files/entities/revived/_tablets/grandmaster.xml", x, y)
 
-	--CreateItemActionEntity( "KUPOLI_OPEN_GATE", x, y )
+	--CreateItemActionEntity( "moldos_OPEN_GATE", x, y )
 
 	GameAddFlagRun("ikkuna_wizard")
 	GamePrint("Trace found!")

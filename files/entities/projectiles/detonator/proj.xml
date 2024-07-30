@@ -1,4 +1,4 @@
-<Entity name="$projectile_default" tags="projectile_player,kupoli_detonator_proj" >
+<Entity name="$projectile_default" tags="projectile_player,moldos_detonator_proj" >
   
 	<Base file="data/entities/base_projectile.xml" >
 		<VelocityComponent

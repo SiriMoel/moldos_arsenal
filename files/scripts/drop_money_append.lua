@@ -149,7 +149,7 @@ function do_money_drop( amount_multiplier, trick_kill )
                 herd_id = "gilded"
             end
     
-            if math.random(1, 4) == 2 or EntityHasTag(GetPlayer(), "kupoli_always_drop_souls") then
+            if math.random(1, 4) == 2 or EntityHasTag(GetPlayer(), "moldos_always_drop_souls") then
                 if ModSettingGet("moldos_arsenal.say_soul") == true then
                     GamePrint("You have acquired a " .. SoulNameCheck(herd_id) .. " soul!")
                 end
@@ -166,11 +166,11 @@ function do_money_drop( amount_multiplier, trick_kill )
                 end
             end
 
-            if EntityHasTag(GetPlayer(), "kupoli_extra_soul") and EntityHasTag(entity, "reap_marked") then
+            if EntityHasTag(GetPlayer(), "moldos_extra_soul") and EntityHasTag(entity, "reap_marked") then
                 AddSoul(herd_id)
             end
 
-            if EntityHasTag(GetPlayer(), "kupoli_biome_souls") then
+            if EntityHasTag(GetPlayer(), "moldos_biome_souls") then
                 local whichtype = "friendly"
                 for i=1,#biomethings do
                     if biomethings[i].biome == BiomeMapGetName(x, y) then
@@ -189,7 +189,7 @@ function do_money_drop( amount_multiplier, trick_kill )
         end
     end
 
-    if EntityHasTag(GetPlayer(), "kupoli_enemies_drop_wands") and #EntityGetInRadiusWithTag(x, y, 300, "player_unit") > 0 then
+    if EntityHasTag(GetPlayer(), "moldos_enemies_drop_wands") and #EntityGetInRadiusWithTag(x, y, 300, "player_unit") > 0 then
         local wand = "data/entities/items/wand_unshuffle_04.xml"
         for i,biometable in ipairs(biomethings) do
             if biometable.biome == BiomeMapGetName(x, y) then
