@@ -6,4 +6,4 @@ local weapon = GetUpdatedEntityID()
 AddGunActionPermanent( weapon, "MATERIAL_WATER" )
 
 AddGunAction( weapon, "HITFX_CRITICAL_WATER" )
-AddGunAction( weapon, "moldos_WATER_ESSENCE_PROJ" )
+AddGunAction( weapon, "MOLDOS_WATER_ESSENCE_PROJ" )

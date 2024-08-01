@@ -6,4 +6,4 @@ local weapon = GetUpdatedEntityID()
 local x, y = EntityGetTransform(weapon)
 
 weapon_rngstats(weapon, x, y, 4)
-AddGunAction( weapon, "moldos_HIISI_SNIPER" )
+AddGunAction( weapon, "MOLDOS_HIISI_SNIPER" )
