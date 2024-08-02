@@ -1,4 +1,3 @@
-
 dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 local nxml = dofile_once("mods/moldos_arsenal/lib/nxml.lua")
 
@@ -138,11 +137,6 @@ add_scene(scenes)
 
 -- player
 function OnPlayerSpawned( player )
-
-    dofile_once("mods/moldos_arsenal/files/scripts/souls.lua")
-
-    dofile_once("mods/moldos_arsenal/files/gui.lua")
-
     local px, py = EntityGetTransform(player)
 
     if GameHasFlagRun("moldos_arsenal_init") then return end
