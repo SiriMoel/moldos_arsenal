@@ -4,4 +4,4 @@ dofile("data/scripts/gun/procedural/gun_action_utils.lua")
 
 local wand = GetUpdatedEntityID()
 
-AddGunAction( wand, "moldos_SUMMON_SUN" )
+AddGunAction( wand, "MOLDOS_SUMMON_SUN" )

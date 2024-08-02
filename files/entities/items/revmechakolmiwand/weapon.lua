@@ -4,4 +4,4 @@ dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
 local weapon = GetUpdatedEntityID()
 
 AddGunAction( weapon, "DIVIDE_4" )
-AddGunAction( weapon, "moldos_ROCKET_ROLL" )
+AddGunAction( weapon, "MOLDOS_ROCKET_ROLL" )
