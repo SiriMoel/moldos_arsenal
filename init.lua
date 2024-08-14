@@ -63,6 +63,10 @@ local dropdoers = {
         path = "data/entities/animals/boss_robot/boss_robot.xml",
         script = "mods/moldos_arsenal/files/scripts/death/boss_robot.lua",
     },
+    {
+        path = "data/entities/animals/boss_dragon.xml",
+        script = "mods/moldos_arsenal/files/scripts/death/dragon.lua",
+    },
 }
 
 for i,v in ipairs(dropdoers) do
@@ -138,6 +142,7 @@ add_scene(scenes)
 -- player
 function OnPlayerSpawned( player )
     local px, py = EntityGetTransform(player)
+    
 
     if GameHasFlagRun("moldos_arsenal_init") then return end
 

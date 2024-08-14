@@ -239,19 +239,30 @@ actions_to_insert = {
 			c.fire_rate_wait = c.fire_rate_wait + 60
 		end,
 	},
+	{
+		id = "ROCKET_ROLL",
+		name = "$action_moldos_rocket_roll",
+		description = "$actiondesc_moldos_rocket_roll",
+        sprite = "mods/moldos_arsenal/files/spell_icons/rocket_roll.png",
+		related_projectiles	= { "mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml", 5},
+		type = ACTION_TYPE_PROJECTILE,
+		inject_after = "MISSILE",
+		spawn_level = "",
+		spawn_probability = "",
+		price = 100,
+		mana = 100,
+		max_uses = 10,
+		action = function()
+			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
+			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
+			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
+			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
+			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
+		end,
+	},
 }
 
 for i,v in ipairs(actions_to_insert) do
 	v.id = "MOLDOS_" .. v.id
-	if v.inject_after ~= nil and ModSettingGet("moldos_arsenal.inject_spells") then
-		for i=1,#actions do
-			if actions[i].id == v.inject_after then
-				table.insert(actions, i+1, v)
-			end
-		end
-	elseif ModSettingGet("moldos_arsenal.inject_spells") then
-		table.insert(actions, v)
-	else
-		table.insert(actions, v)
-	end
+	table.insert(actions, v)
 end
