@@ -12,7 +12,7 @@
 		
 		<ItemActionComponent 
 			_tags="enabled_in_world"
-			action_id="KUPOLI_SNIPER_BEAM" >
+			action_id="MOLDOS_SNIPER_BEAM" >
 		</ItemActionComponent>
 	</Base>
 

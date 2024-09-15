@@ -1,4 +1,4 @@
-dofile_once("mods/tales_of_kupoli/files/scripts/utils.lua")
+dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 
 local card = GetUpdatedEntityID()
 local root = EntityGetRootEntity(card)
@@ -9,7 +9,7 @@ local cooldown_frame = ComponentGetValue2(comp_cd, "value_int")
 local x, y = EntityGetTransform(root)
 
 if ComponentGetValue2(comp_controls, "mButtonDownRightClick") == true and GameGetFrameNum() >= cooldown_frame then
-    local targets = EntityGetWithTag("kupoli_detonator_proj")
+    local targets = EntityGetWithTag("moldos_detonator_proj")
     for i=1,#targets do
         local comp_proj = EntityGetFirstComponentIncludingDisabled(targets[i], "ProjectileComponent") or 0
         ComponentSetValue2(comp_proj, "on_lifetime_out_explode", true)
