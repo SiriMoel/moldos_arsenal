@@ -67,6 +67,10 @@ local dropdoers = {
         path = "data/entities/animals/boss_dragon.xml",
         script = "mods/moldos_arsenal/files/scripts/death/dragon.lua",
     },
+    {
+        path = "data/entities/animals/boss_limbs/boss_limbs.xml",
+        script = "mods/molds_arsenal/files/scripts/death/boss_pyramid.lua",
+    },
 }
 
 for i,v in ipairs(dropdoers) do

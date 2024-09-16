@@ -4,10 +4,12 @@ dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
 local weapon = GetUpdatedEntityID()
 local x, y = EntityGetTransform(weapon)
 
-SetRandomSeed(x, y)    
+SetRandomSeed(x, y)
 math.randomseed(x, y+GameGetFrameNum())
 
 local pool = {
+    "RUBBER_BALL",
+    "RUBBER_BALL",
     "RUBBER_BALL",
     "ROCKET",
     "ROCKET_TIER_2",
