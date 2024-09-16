@@ -260,6 +260,27 @@ actions_to_insert = {
 			add_projectile("mods/moldos_arsenal/files/entities/items/mechakolmiwand/rocket_roll.xml")
 		end,
 	},
+	{
+		id          = "HEALING_ARROW", -- it could be a tf2 reference
+		name 		= "$action_moldos_healingarrow",
+		description = "$actiondesc_moldos_healingarrow",
+		sprite 		= "mods/moldos_arsenal/files/spell_icons/healing_arrow.png",
+		related_projectiles	= {"mods/moldos_arsenal/files/entities/projectiles/healing_arrow/proj.xml"},
+		type 		= ACTION_TYPE_PROJECTILE,
+		inject_after = "ARROW",
+		spawn_level                       = "2,3,4,5",
+		spawn_probability                 = "0.3,0.6,0.8,0.8",
+		price = 70,
+		mana = 20,
+		max_uses = 20,
+		never_unlimited = true,
+		action 		= function()
+			add_projectile("mods/moldos_arsenal/files/entities/projectiles/healing_arrow/proj.xml")
+			c.fire_rate_wait = c.fire_rate_wait + 8
+			c.spread_degrees = c.spread_degrees - 10
+			shot_effects.recoil_knockback = 15.0
+		end,
+	},
 }
 
 for i,v in ipairs(actions_to_insert) do
