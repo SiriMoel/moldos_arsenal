@@ -8,12 +8,4 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 
 	SetRandomSeed(x, y)    
     math.randomseed(x, y+GameGetFrameNum())
-
-	local doalterant = math.random(1, 4)
-    if ModSettingGet( "moldos_arsenal.testing" ) then
-        doalterant = 3
-    end
-    if doalterant == 3 then
-        --SpawnAlterant("FISH_LARGE", x, y)
-    end
 end

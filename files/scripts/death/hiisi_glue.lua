@@ -13,12 +13,4 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 	if r == 2 then
 		EntityLoad("mods/moldos_arsenal/files/entities/items/hiisigluegun/weapon.xml", x, y-20)
 	end
-
-	local doalterant = math.random(1, 5)
-    if ModSettingGet( "moldos_arsenal.testing" ) then
-        doalterant = 3
-    end
-    if doalterant == 3 then
-        SpawnAlterant("MAGIC_GLUE", x, y)
-    end
 end

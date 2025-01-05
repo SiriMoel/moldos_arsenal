@@ -1,6 +1,5 @@
 dofile_once("mods/moldos_arsenal/files/scripts/utils.lua")
 dofile_once("data/scripts/perks/perk.lua")
-dofile_once("mods/moldos_arsenal/files/alterants.lua")
 
 function death( damage_type_bit_field, damage_message, entity_thats_responsible, drop_items )
 	local entity_id    = GetUpdatedEntityID()
@@ -19,10 +18,7 @@ function death( damage_type_bit_field, damage_message, entity_thats_responsible,
 	if ModSettingGet( "moldos_arsenal.testing" ) then
         rr = 2
     end
-	if rr == 2 then
-		SpawnAlterant("SNIPER_KIT", x, y)
-	end
-
+	
 	local rrr = math.random(1,6)
 	if rrr == 2 then
 		CreateItemActionEntity( "moldos_SNIPER_BEAM", x , y )
